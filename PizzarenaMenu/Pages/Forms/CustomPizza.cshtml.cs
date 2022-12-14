@@ -19,13 +19,13 @@ namespace PizzarenaMenu.Pages.Forms
         {
             PizzaPrice = Pizza.BasePrice;
             if (Pizza.TomatoSauce) PizzaPrice += 1;
-            if (Pizza.Cheese) PizzaPrice += 1;
-            if (Pizza.Pepproni) PizzaPrice += 1;
-            if (Pizza.Pineapple) PizzaPrice += 10;
+            if (Pizza.Cheese) PizzaPrice += 4;
+            if (Pizza.Pepproni) PizzaPrice +=4;
+            if (Pizza.Pineapple) PizzaPrice += 2;
             if (Pizza.Mushrom) PizzaPrice += 1;
-            if (Pizza.Tuna) PizzaPrice += 1;
-            if (Pizza.Beef) PizzaPrice += 1;
-            if (Pizza.Ham) PizzaPrice += 1;
+            if (Pizza.Tuna) PizzaPrice += 3;
+            if (Pizza.Beef) PizzaPrice += 5;
+            if (Pizza.Ham) PizzaPrice += 6;
 
             return RedirectToPage("/Checkout/Checkout" , new {Pizza.PizzaName , PizzaPrice});
         }

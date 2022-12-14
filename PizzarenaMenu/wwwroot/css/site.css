@@ -43,3 +43,7 @@ tx{
     color:white
 
 }
+
+.img-it :hover{
+    transform:scale(1.1);
+}
