@@ -2,4 +2,18 @@
 @model PizzarenaMenu.Pages.Checkout.CheckoutModel
 @{
 }
-<a class="nav-link text-dark" asp-area="" asp-page="/Checkout/Thanks">Thank u </a>
+
+<h1>Your Order!</h1>
+@{
+    var imagePath = "~/images/Pizzas/" + (@Model.ImgTitle + ".png");
+}
+<div class="align-content-center">
+    <div class="col-4 mx-auto mb-5">
+        <img src=@imagePath class="w-100" asp-append-version="true" />
+        <h3>Ur @Model.PizzaName Pizza  </h3>
+
+        <h4>Total Price for ur pizza is @Model.PizzaPrice $ </h4>
+        <br />
+        <a class="btn btn-primary mt-1 mx-auto" asp-area="" asp-page="/Checkout/Thanks">Confirm order</a>
+    </div>
+</div>
